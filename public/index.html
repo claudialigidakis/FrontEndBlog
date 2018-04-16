@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Blog Main Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/main.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script defer src="/post.js" charset="utf-8"></script>
+</head>
+
+<!-- page header -->
+<div class="jumbotron jumbotron-fluid bg-info">
+  <div class="container">
+    <h1 class="display-2">Post Your Thoughts</h1>
+    <p>
+      <button id="createPost" class="btn btn-secondary">Create a Post</button>
+    </p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- blog pages listed -->
+  <div class="row">
+    <div id="displayallposts" class="col-md-3">
+      <ul class="list-group">
+      </ul>
+    </div>
+
+    <!--view posts-->
+    <div id="carddisplay" style="display:none" class="col-md">
+      <h1 id="posttitle"></h1>
+      <div class="card">
+        <div id="contentPosts" class="card-body">
+        </div>
+      </div>
+      <button id="removePost" type="submit" class="btn btn-secondary">Remove</button>
+      <button id="editPost" type="submit" class="btn btn-secondary">Edit</button>
+    </div>
+
+    <!--edit titles-->
+    <div id="formdisplay" style="display:none" class="col-md">
+      <div class="input-group">
+        <input id="formTitle" class="form-control" type="text" placeholder="Title">
+      </div>
+      <!--edit content -->
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1"></label>
+        <textarea class="form-control" id="formContent" rows="3" placeholder="Blog Content"></textarea>
+      </div>
+      <div class="col-auto">
+      <button id="formSubmit" type="submit" class="btn btn-secondary">Submit</button>
+    </div>
+    </div>
+
+
+  </div>
+  <div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+
+</html>
